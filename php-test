@@ -1,0 +1,821 @@
+<?php get_header(); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		
+		<header>
+			
+			
+			<div class="header-content">
+			
+			
+				<?php
+	
+				if( have_rows('headers') ):
+				
+				    while ( have_rows('headers') ) : the_row();
+				
+				        if( get_row_layout() == 'front_header' ):?>
+				        
+				        
+				        
+				        
+				        <div class="front_header">
+					        
+					        <div class="height_maker">
+
+								<?php the_sub_field('video');?>
+
+								<script>
+									var mob_iframe ='<iframe src="https://player.vimeo.com/video/218957499?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';	
+								</script>
+
+								<img style="object-fit: cover;min-width: 100%;min-height: 100%;position: relative;width: 100%;height: auto;" src="<?php the_sub_field('alt_image');?>">
+
+
+					        </div>
+					        
+					        <div class="header_overlay">
+						        
+						        <img width="400" class="v_align" src="https://bryndowning.com/wp-content/themes/impression/images/logo_blue.png">
+						        
+					        </div>
+					        
+					        <div class="video_header"></div>
+					        
+					        <div class="header_content">
+						       
+								<img width="400" style="z-index: 1;" class="v_align logo_mobile" src="https://bryndowning.com/wp-content/uploads/2018/09/logo_white_40perc.png">
+							        
+						        
+					        </div>
+					        
+					        <div class="a_left">
+									<img class="v_align contact_quote_open" width="10" src="https://bryndowning.com/wp-content/themes/impression/images/contact_left.png">
+								</div>
+								<div class="a_top">																	
+									<a href="https://bryndowning.com">
+										<img  height="11" src="https://bryndowning.com/wp-content/themes/impression/images/title_top.png">
+									</a>
+								</div>
+								<div class="a_right">
+									<img class="v_align menu_open_close" width="10" src="https://bryndowning.com/wp-content/themes/impression/images/menu_right.png">
+								</div>
+								<div class="a_bottom">
+									<a href="#content-start">
+										<img  height="10" src="https://bryndowning.com/wp-content/themes/impression/images/down.png">
+									</a>
+								</div>
+					        
+				        </div>
+				        
+				        
+				        
+				        
+				        
+				        <?php elseif( get_row_layout() == 'other_header' ):?>
+				        
+				        
+				        <div class="front_header">
+					        
+					        <div class="height_maker">
+		
+								<?php the_sub_field('video');?>
+
+								<script>
+									var mob_iframe ='<iframe src="https://player.vimeo.com/video/218957499?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';	
+								</script>
+
+								<img style="object-fit: cover;min-width: 100%;min-height: 100%;position: relative;width: 100%;height: auto;" src="<?php the_sub_field('alt_image');?>">
+
+
+					        </div>
+					        
+					        <div class="video_header"></div>
+					        
+					        <div class="header_content">
+						       
+								<div style="z-index: 1;display: block;position: absolute;width: 100%;" class="v_align">
+									<div class="extra_space_wrapper" style="max-width: 580px;width: 90%;margin: auto;">
+									<div class="extra_space"><?php the_sub_field("title");?></div></div>
+								</div>
+						        
+					        </div>
+					        
+								<div class="a_left">
+									<img class="v_align contact_quote_open" width="10" src="https://bryndowning.com/wp-content/themes/impression/images/contact_left.png">
+								</div>
+								<div class="a_top">			
+									<a href="https://bryndowning.com">
+										<img  height="150" src="https://bryndowning.com/wp-content/themes/impression/images/title_top.png">
+									</a>
+								</div>
+								<div class="a_right">
+									<img class="v_align menu_open_close" width="10" src="https://bryndowning.com/wp-content/themes/impression/images/menu_right.png">
+								</div>
+								<div class="a_bottom">
+									<a href="#content-start">
+										<img  height="10" src="https://bryndowning.com/wp-content/themes/impression/images/down.png">
+									</a>
+								</div>
+				        </div>
+
+				        <div class="header_details">
+					        
+					        <div class="wrap">
+						        <div style="z-index: 1;display: block;max-width: 580px;width: 90%;margin: auto;" class="v_align extra_space_wrapper">
+									<div class="extra_space"><?php the_sub_field("title");?></div>
+								</div>
+								<?php the_sub_field("snippet");?>
+					        </div>
+					        
+				        </div>
+				        
+				        
+				        
+				        
+				        <?php endif;
+				
+				    endwhile;
+				
+				else :?>
+								       		       
+
+								<div class="a_left" style="z-index: 150">
+									<img class="v_align contact_quote_open" width="10" src="https://bryndowning.com/wp-content/themes/impression/images/contact_left_blue.png">
+								</div>
+								<div class="a_top" style="z-index: 150">
+									<a href="https://bryndowning.com">
+										<img  height="46" src="https://bryndowning.com/wp-content/themes/impression/images/title_top-colour.png">
+									</a>
+								</div>
+								<div class="a_right" style="z-index: 150">
+									<img class="v_align menu_open_close" width="10" src="https://bryndowning.com/wp-content/themes/impression/images/menu_right_blue.png">
+								</div>
+						        
+<!-- 					        <style>
+						    
+						    .header-content{padding-top: 60px;}
+						        
+						    </style> -->
+
+				
+				
+				<?php endif;
+				
+				?>
+			
+			</div>
+
+
+			
+			
+		</header>
+		
+		<article class="">
+		
+		
+		<div id="content-start" class="main-content">
+			
+			
+				<?php
+	
+				if( have_rows('content') ):
+				
+				    while ( have_rows('content') ) : the_row();
+				
+				        if( get_row_layout() == 'welcome_services' ):?>
+				        
+				        <div class="welcome_services">
+					        
+					        <div class="half left">
+						        <div class="wrap">
+							        <div class="extra_space">Welcome</div>
+							        <div style="width:85%">
+								        <?php the_sub_field("welcome_content");?>
+							        </div>
+							        
+						        </div>
+					        </div>
+					        
+					        <div class="half right">
+						        <div class="wrap">
+									<div class="extra_space">Services</div>
+									<br>
+									<?php
+
+									// check if the repeater field has rows of data
+									if( have_rows('services_repeater') ):
+										$count = 0;
+									 	// loop through the rows of data
+									    while ( have_rows('services_repeater') ) : the_row();?>
+											<div class="half left">
+												<img service-id="<?php echo $count;?>" class="image_clicker" data-alt-src="<?php the_sub_field('image_hover');?>" width="135" height="135" src="<?php the_sub_field('image_resting');?>"><br>
+										        <?php the_sub_field('title');?>
+											</div>
+									
+									    <?php 
+										    $count++;
+										    
+										    endwhile;
+									
+									else :
+									
+									    // no rows found
+									
+									endif;
+									
+									?>
+									
+									
+						        </div>
+					        </div>
+					        
+					        <?php
+									
+									$service_content;
+									
+									// check if the repeater field has rows of data
+									if( have_rows('services_repeater') ):
+										
+										$count = 0;
+									 	// loop through the rows of data
+									    while ( have_rows('services_repeater') ) : the_row();
+									     
+										$service_content[$count]["img_hover"] =	get_sub_field('image_hover');
+										$service_content[$count]["img_resting"] = get_sub_field('image_resting');
+										$service_content[$count]["title"] =	get_sub_field('title');
+										$service_content[$count]["snippet"] = get_sub_field('snippet');
+										$service_content[$count]["big_img"] =	get_sub_field('big_image');
+										$service_content[$count]["page"] =	get_sub_field('page');
+										
+										$count++;
+									
+									    endwhile;
+									
+									else :
+									
+									    // no rows found
+									
+									endif;?>
+									<script>
+										
+									<?php echo "var service_data2 = ".json_encode($service_content);?>;
+									
+									var service_data = JSON.parse(JSON.stringify(service_data2));
+									
+									</script>
+					        
+					        
+					        
+					        <div class="clear"></div>
+					        
+					        <script>
+						        
+						        jQuery(".image_clicker").on("click", function(){
+							        
+							        jQuery(".flaps .details .v_align").prepend("<div class='wrap'><img src='"+service_data[jQuery(this).attr("service-id")].img_resting+"' width='300' height='300'><h2>" + service_data[jQuery(this).attr("service-id")].title + "</h2>" + "<span>" + service_data[jQuery(this).attr("service-id")].snippet+"</span></div>");
+							        							        
+									jQuery(".flaps .image_"+jQuery(this).attr("service-id")).fadeIn(200);
+									jQuery(".flaps .image_"+jQuery(this).attr("service-id")).addClass("visible");
+									jQuery(".flaps .details .next").attr("go-to", parseInt(jQuery(this).attr("service-id"))+1);
+									jQuery(".flaps .details .view_link").attr("href", service_data[jQuery(this).attr("service-id")].page);			        
+									jQuery(".flaps .details .prev").attr("go-to", parseInt(jQuery(this).attr("service-id"))-1);
+									
+									if(parseInt(jQuery(this).attr("service-id"))-1 == -1){
+									
+										jQuery(".flaps .details .prev").attr("go-to", parseInt((Object.keys(service_data).length))-1);
+									
+									}else{
+										
+										jQuery(".flaps .details .prev").attr("go-to", parseInt(jQuery(this).attr("service-id"))-1);
+										
+									}
+									
+									if(parseInt(jQuery(this).attr("service-id"))+1 > (Object.keys(service_data).length)){
+																																												jQuery(".flaps .details .next").attr("go-to", parseInt(0));			        
+																																											}else{
+																																												jQuery(".flaps .details .next").attr("go-to", parseInt(jQuery(this).attr("service-id"))+1);			        
+									}	
+									
+									
+									
+									
+							       
+							       jQuery(".flaps").toggle(1, function(){
+								      
+								      jQuery(".flaps .image_flap").css("left", "0%");
+									  jQuery(".flaps .details").css("right", "0%"); 
+								       
+							       })
+							       
+
+						        });
+						        
+						        
+						        
+						        jQuery(document).on("click", ".close", function(){
+							        
+									jQuery(".flaps .image.visible").fadeOut(800, function(){
+										jQuery(".flaps .image.visible").removeClass("visible");
+									})
+									
+									
+									if(jQuery(window).width() > 900){
+										jQuery(".flaps .image_flap").css("left", "-50%");
+										jQuery(".flaps .details").css("right", "-50%");
+									}else{
+										jQuery(".flaps .image_flap").css("left", "-100%");
+										jQuery(".flaps .details").css("right", "-100%");
+									}
+																		
+									setTimeout(
+										  function() 
+										  {
+											  
+										  jQuery(".flaps").toggle(1, function(){})
+										  jQuery(".flaps .details .wrap").remove();
+									}, 801);
+							       
+									
+							       
+
+						        });
+						        
+						        
+						        
+						        jQuery(document).on("click", ".next", function(){
+							       jQuery(".flaps .details .wrap").css("opacity", 0);
+							       setTimeout(
+									  function() 
+									  {									    									       jQuery(".flaps .details .wrap").remove();
+
+									}, 800);
+							       
+
+setTimeout(
+									  function() 
+									  {				
+										
+																				  					    	
+									  
+										   jQuery(".flaps .details .v_align").prepend("<div class='wrap'><img src='"+service_data[jQuery(".next").attr("go-to")].img_resting+"' width='300' height='300'><h2>" + service_data[jQuery(".next").attr("go-to")].title + "</h2>" + "<span>" + service_data[jQuery(".next").attr("go-to")].snippet+"</span></div>");
+										   
+										   	jQuery(".flaps .details .view_link").attr("href", service_data[jQuery(".next").attr("go-to")].page);			        
+
+										   
+										jQuery(".flaps .image.visible").fadeOut(200, function(){
+											jQuery(".flaps .image.visible").removeClass("visible");
+											jQuery(".flaps .image_"+jQuery(".next").attr("go-to")).fadeIn(200);
+											jQuery(".flaps .image_"+jQuery(".next").attr("go-to")).addClass("visible");
+											
+											
+											if(parseInt(jQuery(".next").attr("go-to"))-1 == -1){
+									
+												jQuery(".flaps .details .prev").attr("go-to", parseInt((Object.keys(service_data).length))-1);
+											
+											}else{
+												
+												jQuery(".flaps .details .prev").attr("go-to", parseInt(jQuery(".next").attr("go-to"))-1);
+												
+											}
+											
+											if(parseInt(jQuery(".next").attr("go-to"))+1 == (Object.keys(service_data).length)){
+																																														jQuery(".flaps .details .next").attr("go-to", parseInt(0));			        
+																																													}else{
+																																														jQuery(".flaps .details .next").attr("go-to", parseInt(jQuery(".next").attr("go-to"))+1);			        
+											}
+											
+											
+										});
+
+									
+									
+									
+										  
+										  
+										  
+										  
+			       
+									}, 801);
+							      
+							        
+							        
+						        });
+						        
+						        
+						        
+						        
+						        jQuery(document).on("click", ".prev", function(){
+							       jQuery(".flaps .details .wrap").css("opacity", 0);
+							       setTimeout(
+									  function() 
+									  {									    									       jQuery(".flaps .details .wrap").remove();
+
+									}, 800);
+							       
+
+setTimeout(
+									  function() 
+									  {									    	
+									  
+									  
+									  
+										   
+										   jQuery(".flaps .details .v_align").prepend("<div class='wrap'><img src='"+service_data[jQuery(".prev").attr("go-to")].img_resting+"' width='300' height='300'><h2>" + service_data[jQuery(".prev").attr("go-to")].title + "</h2>" + "<span>" + service_data[jQuery(".prev").attr("go-to")].snippet+"</span></div>");
+													
+																							   	jQuery(".flaps .details .view_link").attr("href", service_data[jQuery(".prev").attr("go-to")].page);			        
+				
+									
+									
+									jQuery(".flaps .image.visible").fadeOut(200, function(){
+											jQuery(".flaps .image.visible").removeClass("visible");
+											jQuery(".flaps .image_"+jQuery(".prev").attr("go-to")).fadeIn(200);
+											jQuery(".flaps .image_"+jQuery(".prev").attr("go-to")).addClass("visible");
+											if(parseInt(jQuery(".prev").attr("go-to"))+1 == (Object.keys(service_data).length)){
+																																														jQuery(".flaps .details .next").attr("go-to", parseInt(0));			        
+																																													}else{
+																																														jQuery(".flaps .details .next").attr("go-to", parseInt(jQuery(".prev").attr("go-to"))+1);			        
+											}
+											
+											if(parseInt(jQuery(".prev").attr("go-to"))-1 == -1){
+											
+												jQuery(".flaps .details .prev").attr("go-to", parseInt((Object.keys(service_data).length))-1);
+											
+											}else{
+												
+												jQuery(".flaps .details .prev").attr("go-to", parseInt(jQuery(".prev").attr("go-to"))-1);
+												
+											}
+										});
+										  
+			       
+									}, 801);
+							      
+							        
+							        
+						        });
+						        
+						        
+						        jQuery(document).ready(function(){
+							        
+									for(var i in service_data)
+									{
+									     //alert(service_data[i].title)
+									}
+							        
+						        });
+						        
+						    </script>
+					        
+					        <div class="flaps">
+						        <div class="half image_fill image_flap">
+							        
+							        <?php
+
+									// check if the repeater field has rows of data
+									if( have_rows('services_repeater') ):
+										$count = 0;
+									 	// loop through the rows of data
+									    while ( have_rows('services_repeater') ) : the_row();?>
+											
+											
+										<img class="image image_<?php echo $count;?>" src="<?php the_sub_field('big_image');?>">
+											
+									
+									    <?php 
+										    $count++;
+										    
+										    endwhile;
+									
+									else :
+									
+									    // no rows found
+									
+									endif;
+									
+									?>
+							        
+						        </div>
+								<div class="half details">
+									<div class="v_align">
+									<br>
+									<div style="max-width: 340px;text-align: center;margin: auto;">
+									<div class="next"><img width="47" height="47" src="https://bryndowning.com/wp-content/themes/impression/images/prev.png" data-alt-src="https://bryndowning.com/wp-content/themes/impression/images/prev_hover.png"></div>
+																		<a class="view_link" href=""><div class="view"><img height="47" src="https://bryndowning.com/wp-content/themes/impression/images/close.png" data-alt-src="https://bryndowning.com/wp-content/themes/impression/images/view_hover.png"></div></a>
+
+									<div class="prev"><img width="47" height="47" src="https://bryndowning.com/wp-content/themes/impression/images/next.png" data-alt-src="https://bryndowning.com/wp-content/themes/impression/images/next_hover.png"></div>
+
+									<br><br>
+									<div style="width: 190px;display: inline-block;">
+										<div class="extra_space close">Close</div>
+									</div>
+									</div>
+									</div>
+								</div>
+					        </div>
+				        </div>
+				        
+				        
+				        
+				        
+				        
+				        <?php elseif( get_row_layout() == 'full_width_image' ):?>
+				        
+				        <div class="full_width_image">
+					        
+					        <img src="<?php the_sub_field("image");?>">
+					        
+				        </div>
+				        
+				        
+				        <?php elseif( get_row_layout() == 'generic_text' ):?>
+				        
+				        <div class="generic_text">
+							
+							<div class="wrap">
+
+							<?php the_sub_field("text_content");?>
+							
+							</div>
+					        
+				        </div>
+
+				        <?php elseif ( get_row_layout() == 'bio_layout' ) :?>
+
+				        <div class="bio-layout">
+							<div class="wrap">
+								<div class="half left">				        	
+						        	<div class="bio-image">
+						        		<img src="<?php the_sub_field("bio-image");?>">
+						        	</div><!-- .bio-image end -->
+						        </div><!-- .half left end -->
+						        <div class="half right">
+
+						        	<div class="bio-title">
+										<h2><?php the_sub_field("title");?></h2>
+						        	</div>
+						        	<div class="bio-content">
+						        		<?php the_sub_field("content") ?>
+						        	</div>
+						        </div>
+						        <div class="clear"></div>
+				        	</div><!-- .wrap end -->
+				        </div>
+
+				        <?php elseif( get_row_layout() == 'categories' ):?>
+
+				        <div class="categories">
+					        <div class="wrap">
+					        <?php if( have_rows('category') ):
+								while ( have_rows('category') ) : the_row();?>
+								  	<div class="half left">
+								        <div style="max-width: 420px; width: 100%;display: block;margin: auto">
+									        <div class="category-header"><h2><?php the_sub_field("title");?></h2></div>
+								        </div><!-- style end -->
+									  	<?php if(get_sub_field("video")){?>
+										  	<div class="video_shade">
+											  	<div class="v_align">
+												<a href="<?php the_sub_field("video");?>"><img width="47" heigh="47" style="width:47px;height: 47px;padding-top: 7px;" class="right" src="https://bryndowning.com/wp-content/themes/impression/images/play_inverted.png"><span style="font-size: 28px;"><?php the_sub_field("title");?></span><br><?php the_sub_field("more");?></a>
+												</div><!-- .v-align end -->
+										  	</div><!-- .video_shade end -->
+									  	<?php } ?>
+									  	<img src="<?php the_sub_field("image");?>">
+								  	</div><!-- .half left end -->
+								<?php endwhile;
+								else :
+								    // no rows found
+								endif;?>
+								<div class="clear"></div>
+					        </div><!-- .wrap end -->
+					    </div><!-- .categories end -->
+
+
+						<?php elseif( get_row_layout() == 'map' ):?>
+				        
+				        <div class="maps">
+					        
+					        <div id="map">
+						        
+					        </div>
+					        
+					        <div class="wrap" style="padding-top: 60px;padding-bottom: 60px;">
+						        
+						        <div class="half left">
+							        <span style="font-size: 32px;color:#488EB3;">
+							        Need a chat about your project?
+							        </span>
+							        <p>Simply fill in your details and send to us and I'll get back to you.</p>
+							        <?php echo do_shortcode('[contact-form-7 id="221" title="Contact Page"]');?>
+						        </div>
+						        <div class="half left">
+							        <div class="contact_second" style="max-width: 400px;width: 95%;padding-left: 70px;float: left;">
+									 <img width="240" class="" src="https://bryndowning.com/wp-content/themes/impression/images/logo_blue.png"><br><br><br>
+										Bryn Downing<br>
+										Director<br><br>
+
+										+44 7‭958 407497‬<br>
+										<a href="mailto:bryn@bryndowning.com">bryn@bryndowning.com</a><br>	        
+							        </div>
+						        </div>
+								<div class="clear"></div>						        
+					        </div>
+					        
+				        </div>
+      
+				        
+				        <?php elseif( get_row_layout() == 'fancy_graphic' ):?>
+				        
+				        <div class="fancy_graphic">
+					        
+					        <div style="max-width:750px;width: 100%;margin: auto;"><span class="extra_space">Our Process</span></div>
+					        
+							<div class="wrap">
+								
+								
+								
+								<div class="image_wrap">
+									<img src="https://bryndowning.com/wp-content/themes/impression/images/image_01.png">
+									<div class="wipelr animation_delay"></div>
+								</div>
+								<div class="image_wrap">
+									<img src="https://bryndowning.com/wp-content/themes/impression/images/image_02.png">
+									<div class="wiperl animation_delay"></div>
+								</div>
+								<div class="image_wrap">
+									<img src="https://bryndowning.com/wp-content/themes/impression/images/image_04.png">
+									<div class="wipelr animation_delay"></div>
+								</div>
+								<div class="image_wrap">
+									<img src="https://bryndowning.com/wp-content/themes/impression/images/image_05.png">
+									<div class="wiperl animation_delay"></div>
+								</div>
+
+								</div>
+								
+							</div>
+					        
+				        </div>
+
+				        
+				        <?php elseif( get_row_layout() == 'inp_touch' ):?>
+				        
+				        <div class="inp_touch">
+					        <div class="wrap">
+						        <div style="max-width: 450px;width: 100%;margin: auto;">
+									<div class="extra_space">INP TOUCH</div>
+
+						        </div>
+								<?php the_sub_field("content");?>
+					        </div>
+				        </div>
+
+						<?php elseif( get_row_layout() == 'inp_touch_alt' ):?>
+				        
+				        <div class="inp_touch alt">
+					        <div class="wrap">
+						        <div style="max-width: 450px;width: 100%;margin: auto;">
+									<div class="extra_space">INP TOUCH</div>
+
+						        </div>
+						        <div class="half left">
+									<?php the_sub_field("content");?>
+						        </div>
+						        <div class="half right">
+							    <p>Read more about our specialist production services</p>
+								<?php if( have_rows('page_links') ):
+										
+									  while ( have_rows('page_links') ) : the_row();?>
+									  	<div class="bttn"><a href="<?php the_sub_field("page");?>"><?php the_sub_field("title");?></a></div>
+								        
+								        <?php endwhile;
+									
+									else :
+									
+									    // no rows found
+									
+									endif;?>
+						        </div>
+						        <div class="clear"></div>
+					        </div>
+				        </div>
+				        
+				        <?php elseif( get_row_layout() == 'projects' ):?>
+				        
+				        <div class="projects">
+					        
+					        <div class="wrap">
+					        
+					        <div style="max-width: 420px; width: 100%;display: block;margin: auto">
+						        
+						        <div class="extra_space"><?php the_sub_field("title");?></div>
+
+					        </div>
+					        
+					        <?php if( have_rows('project') ):
+										
+									  while ( have_rows('project') ) : the_row();?>
+									  	
+									  	<div class="half left">
+										  	
+										  	<?php if(get_sub_field("video")){?>
+											  	
+											  	<div class="video_shade">
+												  	
+												  	<div class="v_align">
+													<a href="<?php the_sub_field("video");?>"><img width="47" heigh="47" style="width:47px;height: 47px;padding-top: 7px;" class="right" src="https://bryndowning.com/wp-content/themes/impression/images/play_inverted.png"><span style="font-size: 28px;"><?php the_sub_field("client");?></span><br><?php the_sub_field("title");?></a>
+
+													  	
+													  	
+												  	</div>
+												  	
+											  	</div>
+											  	
+										  	<?php } ?>
+										  	
+										  	<img src="<?php the_sub_field("image");?>">
+									  	</div>
+									  	
+									  	
+									  	<?php endwhile;
+									
+									else :
+									
+									    // no rows found
+									
+									endif;?>
+									<div class="clear"></div>
+					        </div>
+					        
+					        
+					        
+				        </div>
+				        
+				        
+				        
+						<?php elseif( get_row_layout() == 'blog_display' ):?>
+
+<div class="blog_wrap">
+		
+		<div style="max-width: 300px;width: 100%;text-align: center;margin: auto;margin-bottom: 30px;">
+								<span class="extra_space">Social</span>	
+								</div>
+
+						        
+						        
+						        
+<?php
+$args=array(
+  'post_type' => 'post',
+  'post_status' => 'publish',
+  'posts_per_page' => 4
+);
+$myposts = get_posts( $args );
+foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+<article class="quarter left">
+
+				<?php the_post_thumbnail(); ?>
+
+				<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+
+
+				<div class="entry">
+					<?php the_excerpt(); ?>
+				</div>
+				
+				<a href="<?php the_permalink();?>" style="font-size: 14px;line-height: 22px;color:#488EB3;">Read full article</a>
+
+				<div class="clear"></div>
+			</article>
+
+
+  <?php endforeach; 
+wp_reset_postdata();
+?>
+<div class="clear"></div>
+
+						        
+						        
+						        
+						        
+						    	
+</div>
+				        
+				        <?php endif;
+				
+				    endwhile;
+				
+				else :
+				
+				
+				endif;
+				
+				?>
+			
+			
+			</div>
+		
+		
+		</article>
+		<?php endwhile; endif; ?>
+	<div class="clear"></div>
+<?php get_footer(); ?>
